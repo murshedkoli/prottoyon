@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=ss.js></script>
+    <script src="js.js"></script>
+    <link href="https://fonts.maateen.me/adorsho-lipi/font.css" rel="stylesheet">
+
+    <title>প্রত্যয়ন পত্র</title>
+
+    <style>
+body{
+    font-family: 'AdorshoLipi', sans-serif;
+
+}
+        h1{
+            text-align: center;
+        }
+        .container{
+            
+        }
+#myDIV{
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 100vh;
+}
+
+.ss{
+    width: 90%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    min-height: 500px;
+
+   
+
+}
+
+input{
+    width: 50%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+#mainbutton{
+    font-size: 30px;
+    font-weight: bold;
+    background-color: darkseagreen;
+    border-radius: 3px;
+    box-shadow: 0 0 2 black;
+}
+
+label{
+    font-size: 20px;
+}
+
+#pro{
+    padding: 20px;
+}
+
+    #kalikaccha{
+        font-size: 40px;
+        font-weight: bold;
+        color:green;
+        margin-bottom: 1px;
+    }
+    #address{
+        font-size: 20px;
+        color: rgb(85, 28, 7);
+        margin: 1px 0;
+    }
+
+    #chairmen{
+        font-size: 16px;
+        color: red;
+        margin: 2px 0;
+    }
+
+#mobile{
+    font-size: 14px;
+}
+
+    .line{
+      margin: 0;
+    }
+img{
+    width: 100%;
+
+}
+    #line img{
+        height: 5px;
+        margin:  0;
+    }
+
+#print-btn{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+#prottoyon{
+    text-decoration: underline;
+}
+.lin{
+    display: flex;
+    justify-content: space-between;
+    margin: 1px;
+}
+
+.ln{
+    margin: 1px;
+}
+
+
+.main{
+    padding: 100px;
+}
+
+.mainlekha{
+    text-align: justify;
+}
+
+#watermarkimg{
+    z-index: -1;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 450px;
+    margin: auto;
+    margin-top: 250px;
+}
+
+#maincontent {
+   position: absolute;
+    display: block;
+    z-index: 8;
+    top: 10px;
+}
+
+
+#options {
+	align-content:center;
+	align-items:center;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+<div  id="myDIV">
+
+   <h1>আবেদন পত্র</h1>
+
+    <label for="">নাম</label>
+    <input name="name" id="name" type="text" placeholder="নাম"  required>
+    <label for="">পিতার/স্বামীর নাম</label>
+    <input id="father" type="text" placeholder="পিতা/স্বামীর নাম" >
+    <label for="">মাতার নাম</label>
+    <input id="mother" type="text" placeholder="মাতার নাম" >
+    <label for="">গ্রামের নাম</label>
+    <input id="village" type="text" placeholder="গ্রামের নাম" >
+    <label for="">ওয়ার্ড নম্বর</label>
+    <input id="ward" type="text" placeholder="ওয়ার্ড নং" >
+
+    <label for="">প্রত্যয়ন</label>
+    <input id="last-word" type="text" placeholder="প্রত্যয়নের বিষয়" ><br><br>
+    <input class="sendButton" type="submit" id="mainbutton" onclick="prottoyon()" value="Submit"></input>
+
+</div>
+
+
+
+
+<div class="ss s1" id="pro" style="display:none;">
+    <img id="watermarkimg" src="watermark.jpg" alt="">
+    <div id="maincontent">
+    <h1 id="kalikaccha">০৪নং কালিকচ্ছ ইউনিয়ন পরিষদ </h1>
+    <h3 id="address">উপজেলা- সরাইল, জেলা- ব্রাহ্মণবাড়িয়া।</h3>
+    <h4 id="chairmen">চেয়ারম্যান- মোঃ শরাফত আলী, <span id="mobile">মোবাইল- ০১৭২৭-৬৪৯১৩৬</span></h4>
+<div id="line">
+        <img src="line.jpg" alt="">
+        <div class="lin">
+    <div class="ln"><p >সূত্র :</p></div><div class="ln"><p >তারিখ:- <script> document.write(new Date().toDateString()); </script>    </p></div>
+</div>
+</div>
+<div class="main">
+<h1 id="prottoyon">প্রত্যয়ন পত্র</h1>
+
+<p class="mainlekha" ><span id="ps1"></span><span id="name1"></span>,&nbsp; পিতা/স্বামীর নাম- <span id="father1"></span>, &nbsp;মাতা- <span id="mother1"></span>,&nbsp;গ্রাম- <span id="village1"></span>,&nbsp;<span id="ward1"></span>&nbsp;<span id="wardno"></span>&nbsp;<span id="lastword"></span>&nbsp;<span id="lastword1"></span></p>
+<br>
+<br>
+<p id="vov"></p>
+
+</div>
+<div id="options">
+    <input id="printpagebutton" type="button" value="প্রিন্ট করুন" onclick="printpage()"/>
+    </div>
+
+</div>
+</div>
+</div>
+<script>    var new Date().toDateString()= "Sun Sep 13 2015"
+</script>
+<script>
+
+    function prottoyon(){
+
+    var para= "এই মর্মে প্রত্যয়ন করা যাইতেছে যে,";
+    var para1="ইউনিয়ন- কালিকচ্ছ, উপজেলা- সরাইল, জেলা- ব্রাহ্মণবাড়িয়া। তিনি ০৪নং কালিকচ্ছ ইউনিয়নের";
+    var chini= "এর একজন স্থায়ী বাসিন্দা। আমি তাকে চিনি ও জানি। আমার জানামতে";
+    var ujjal= "আমি তাহার উজ্জল ভবিষ্যৎ কামনা করি।";
+  
+    var namE = document.getElementById("name").value;
+    var fatherName = document.getElementById("father").value;
+    var motherName = document.getElementById("mother").value;
+    var villageName = document.getElementById("village").value;
+    var wardName = document.getElementById("ward").value;
+    var lastWord = document.getElementById("last-word").value;
+    
+    document.getElementById("ps1").innerHTML = para;
+    document.getElementById("name1").innerHTML = namE;
+    document.getElementById("father1").innerHTML = fatherName;
+    document.getElementById("mother1").innerHTML = motherName;
+    document.getElementById("village1").innerHTML = villageName;
+    document.getElementById("ward1").innerHTML = para1;
+    document.getElementById("wardno").innerHTML = wardName;
+    document.getElementById("lastword").innerHTML = chini;
+    document.getElementById("lastword1").innerHTML = lastWord;
+    document.getElementById("vov").innerHTML = ujjal;
+
+    
+}
+    </script>
+
+
+
+<script>
+    $(document).ready(function(){
+      $("#mainbutton").click(function(){
+        $("#myDIV").hide();
+      });
+      $("#mainbutton").click(function(){
+        document.getElementById("pro").style.display = "block";
+      });
+    });
+    </script>
+
+</script>
+
+
+<script>
+function printpage() {
+        //Get the print button and put it into a variable
+        var printButton = document.getElementById("printpagebutton");
+        //Set the print button visibility to 'hidden' 
+        printButton.style.visibility = 'hidden';
+        //Print the page content
+        window.print()
+        printButton.style.visibility = 'visible';
+    }
+
+</script>
+</body>
+</html>
